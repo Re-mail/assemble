@@ -36,15 +36,15 @@
             </div>
             
             <div class="cd1" style="margin-top: 90px; float: left;">
-                <h6>보낸사람 <input type = "text" name = "id" style='border: solid gray; width:400px'/></h6>
-        		<h6>받을사람 <input type = "text" name = "pw" style='border: solid gray; width:400px; ' /></h6>
-                <h6>참조 <input type = "text" name = "pw" style='border: solid gray; width:400px; ' /></h6>
-        		<h6>제목 <input type = "text" name = "pw" style='border: solid gray; width:400px; margin-bottom:30px' /></h6>
+                <h6>보낸사람 <input type = "text" name = "sender" style='border: solid gray; width:400px' /></h6>
+        		<h6>받을사람 <input type = "text" name = "receiver" style='border: solid gray; width:400px; ' value="{{sender}}" /></h6>
+                <h6>참조 <input type = "text" name = "chamjo" style='border: solid gray; width:400px; ' /></h6>
+        		<h6>제목 <input type = "text" name = "title" style='border: solid gray; width:400px; margin-bottom:30px' value="{{title}}" /></h6>
             </div>
             <div style="clear:both;"></div>
             <div style="margin-left: 290px;">
                 <h2>내용 입력</h2>
-                <input type = "text" name = "id" style='border: solid gray; width: 90%; height : 300px; border-radius: 10px;'/>
+                <input type = "text" name = "id" style='border: solid gray; width: 90%; height : 300px; border-radius: 10px;' value="{{mailcontent}}"/>
             </div>
                 
         </div>

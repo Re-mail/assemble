@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 {% load static %}
+{%if alret %}
+<script type="text/javascript">
+	alert("{{alret}}");
+</script>
+{%endif%}
+
 <html>
     <head>
         <title>Re-mail</title>
         <link rel="stylesheet" href="{% static 'css/mailbox.css' %}" media="screen">
+        <script type="text/javascript">
+            function blockf(){
+                alert("사용자가 차단되었습니다.");
+            }
 
+            function deletf(){
+                alert("메일이 삭제되었습니다.");
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -22,6 +36,11 @@
                 </nav>
             </div>
         </header>
+        {% comment %} {%if messages %}
+        <script type="text/javascript">
+            alert("{{messages}}");
+        </script>
+        {%endif%} {% endcomment %}
 
         <div id = "main">
             <div style="float: left;">
@@ -35,19 +54,23 @@
                 </ul>
             </div>
             
-            <div class="cd1" style="margin-top: 80px; float: left;">
-                <div id="read-buttons">
-                    <input class="favorite styled" type="button" value="답장" />
-                    <input class="favorite styled" type="button" value="전달" />
-                    <input class="favorite styled" type="button" value="차단" />
-                    <input class="favorite styled" type="button" value="삭제" />
+            <form action="{% url 'mail_read' %}" method="POST">
+                {% csrf_token %}
+                <div class="cd1" style="margin-top: 80px; float: left;">
+                    <div id="read-buttons">
+                        <input id="readfunc" type="submit" value="답장" name="readfunc" />
+                        <input id="readfunc" type="submit" value="전달" name="readfunc" />
+                        <input id="readfunc" type="submit" value="차단" name="readfunc"  onclick='blockf()'/>
+                        <input id="readfunc" type="submit" value="삭제" name="readfunc" onclick='deletf()'/>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <h6 id="read-info">보낸사람 <span>보낸보낸</span></h6>
+                        <h6 id="read-info">받은사람 <span>받은받은</span></h6>
+                        <h6 id="read-info">제목 <span style="margin-left: 40px">제목제목</span></h6>
+                    </div>
                 </div>
-                <div style="margin-top: 20px;">
-                    <h6 id="read-info">보낸사람 <span>보낸보낸</span></h6>
-                    <h6 id="read-info">받은사람 <span>받은받은</span></h6>
-                    <h6 id="read-info">제목 <span style="margin-left: 40px">제목제목</span></h6>
-                </div>
-            </div>
+            </form>
 
             <div style="clear:both;"></div>
             <div style="margin-left: 290px;">
