@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
+{%if alret %}
+<script type="text/javascript">
+	alert("{{alret}}");
+</script>
+{%endif%}
+
 <html>
     <head>
         <title>Re-mail</title>
