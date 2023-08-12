@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    }
+body{
+   background: #ffffff;
+    width: 1280px;
+    height: 832px;
+    position: relative;
+    overflow: hidden;
+   }
+
+.emailcheckbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 290px;
+   }
+
+.wcodebox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 380px;
+}
+
+.wpwdbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 481px;
+    }
+
+.rwpwdbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 575px;
+    }
+
+
+.signupsubmit {
+    border: none;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 25px;
+    font: 700 20px 'Droid Sans', sans-serif;
+    width: 224px;
+    height: 79px;
+    position: absolute;
+    text-align: center;
+    left: 517px;
+    top: 676px;
+    }
+ 
+    
+.sendcodebox{
+    border: none;
+    font: 700 20px 'Droid Sans', sans-serif;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 179px;
+    height: 42px;
+    position: absolute;
+    text-align: center;
+    left: 927px;
+    top: 290px;
+    }
+
+.checkcodebox{
+    border: none;
+    font: 700 20px 'Droid Sans', sans-serif;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 179px;
+    height: 42px;
+    position: absolute;
+    text-align: center;
+    left: 927px;
+    top: 380px;
+   }
+
+
+.checkemail{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 255px;
+   }
+
+.writecode{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 351px;
+   }
+
+.pwd{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 443px;
+   }
+
+.checkpwd{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 537px;
+   }
+
+
+.re-mail {
+    color: #19722d;
+    text-align: center;
+    font: 400 65px 'Moul', sans-serif;
+    position: absolute;
+    font-weight: 100px;
+    left: 450px;
+    top: 103px;
+    width: 358px;
+    height: 87px;
+   }
+
