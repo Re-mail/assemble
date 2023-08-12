@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Re-mail</title>
+        <link rel="stylesheet" href="{% static 'css/mailbox.css' %}" media="screen">
+
+    </head>
+    <body>
+        <header>
+            <div id = "logo" style="float: left;">
+                <h1><a href="index.html">Re-mail</a></h1>
+            </div>
+            <div style="float: right;" id="header-profile" >
+                <img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 50px;"><span style="margin: 0px 15px 0px 10px;">woo</span>
+            </div>
+            <div id="nav">
+                <nav>
+                    <ul>
+                        <li><a href="#">woo@re-mail.link</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id = "main">
+            <div style="float: left;">
+                <ul>
+                    <li id="menu-profile"><img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 70px;"><span style=" margin-left:5px">woo</span></li>
+                    <li><a class="write-mail" href="http://127.0.0.1:8000/remailbox/mail_write/">메일쓰기</a></li>
+                    <hr>
+                    <li><a href="http://127.0.0.1:8000/remailbox/">받은 메일</a></li>
+                    <li><a href="#">보낸 메일</a></li>
+                    <li><a href="#">사용자 지정 태그</a></li>
+                </ul>
+            </div>
+            
+            <div class="cd1" style="margin-top: 80px; float: left;">
+                <div id="read-buttons">
+                    <input class="favorite styled" type="button" value="답장" />
+                    <input class="favorite styled" type="button" value="전달" />
+                    <input class="favorite styled" type="button" value="차단" />
+                    <input class="favorite styled" type="button" value="삭제" />
+                </div>
+                <div style="margin-top: 20px;">
+                    <h6 id="read-info">보낸사람 <span>보낸보낸</span></h6>
+                    <h6 id="read-info">받은사람 <span>받은받은</span></h6>
+                    <h6 id="read-info">제목 <span style="margin-left: 40px">제목제목</span></h6>
+                </div>
+            </div>
+
+            <div style="clear:both;"></div>
+            <div style="margin-left: 290px;">
+                <h2>메일 내용</h2>
+                
+            </div>
+                
+        </div>
+    </body>
+</html>
