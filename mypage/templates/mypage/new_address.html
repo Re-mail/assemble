@@ -1,0 +1,85 @@
+{% extends 'mypage/mypage.html' %}
+{% block mypage_section %}
+<!-- Section -->
+<section class="newadd">
+	<button type="button">메일 주소 생성</button>
+
+	<form>
+		<div>
+			<span>임시 메일 주소</span><br>
+			<input type="text" name="inputaddress" size="40">
+			<button id="random" type="button">랜덤 생성</button>
+			<button id="check" type="button">중복 확인</button>
+			<br>
+			<span id="checkword">사용 가능한 임시 메일 주소입니다.</span>
+		</div>
+		<div>
+			<span>카테고리 지정</span><br>
+			<input type="text" name="category" size="40">
+			<button id="save" type="button">확인</button>
+		</div>
+
+		
+	</form>
+	
+
+</section>
+{% endblock mypage_section %}
+
+{% comment %} 
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Re-mail/mypage/newaddress</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="mainstyle.css" /> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	</head>
+    <body>
+		<header id="header" class="container">
+			<!-- Logo -->
+			<div id="logo" style="float: left;">
+				<h1><a href="home.html">Re-mail</a></h1> <!--로고 누르면 홈 화면으로 가도록 수정-->
+			</div>
+			<div style="float: right;" id="header-profile" >
+				<img src="free-icon-profile-6522516.png" style="width: 50px;"><span style="margin: 0px 15px 0px 10px;">woo</span>
+			</div>
+		</header>
+		<!-- Nav -->
+		<nav style="float: left;">
+			<ul id="table">
+				<li><a href="mypage.html">계정 관리</a></li>
+				<li><a href="address.html">주소록</a></li>
+			</ul>
+		</nav>
+
+		<!-- Section -->
+		<section class="newadd">
+			<button type="button">메일 주소 생성</button>
+
+			<form>
+				<div>
+					<span>임시 메일 주소</span><br>
+					<input type="text" name="inputaddress" size="40">
+					<button id="random" type="button">랜덤 생성</button>
+					<button id="check" type="button">중복 확인</button>
+					<br>
+					<span id="checkword">사용 가능한 임시 메일 주소입니다.</span>
+				</div>
+				<div>
+					<span>카테고리 지정</span><br>
+					<input type="text" name="category" size="40">
+					<button id="save" type="button">확인</button>
+				</div>
+
+				
+			</form>
+			
+
+		</section>
+        
+    </body>
+  
+</html> {% endcomment %}

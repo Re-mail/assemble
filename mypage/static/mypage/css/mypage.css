@@ -1,0 +1,247 @@
+@import url('https://webfontworld.github.io/kopus/KoPubWorldDotum.css');
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+body {
+    font-family: 'KoPubWorldDotum';
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+    display: inline-block;	
+    height: 80px;
+    background-color: white;
+}
+
+#logo {
+    display: inline-block;
+    height: 80px;
+    margin: 0px;
+    padding: 0px
+}
+
+#logo h1{
+    padding: 0px;
+    margin: 0px;
+}
+
+#logo h1 a{
+    margin-left:20px;
+    font-family: Moul;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    color: #19722D;
+}
+
+#header-profile {
+    height: 100px;
+    display : flex;
+    margin-left:10px;
+    font-family: Moul;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    align-items : center;
+
+}
+
+nav 
+{   
+    height:100%;
+    width:15%;
+    float: left;
+    background: #E8E8E8;
+    overflow: auto;
+    position: fixed;
+}
+
+section{
+    margin-top: 90px; 
+    height:100%;
+    margin-left : 15%;
+    /*
+    display:inline;
+    margin-top:10px;
+    border-top:10px;
+    padding:10px;
+    width:1000px;
+    height:600px;
+    flex-shrink: 0;
+    float:right;*/
+    background: white;
+}
+
+nav ul li {
+    list-style: none;
+    margin:10px;
+    border:10px;
+    float:left;
+}
+
+
+a {
+    
+    text-decoration-line:none;
+    text-align:left;
+}
+
+#logo > a {
+    color: #19722D;
+    text-align: left;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    line-height: normal;
+}
+
+#table a {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 23px;
+    font-style: normal;
+    line-height: normal;
+}
+
+#table a:hover {
+    color: #19722D;
+}
+
+/*section*/
+
+section {
+    align-items : center;
+}
+
+#user {
+    display:inline-block;
+    align-items: center;
+    /*position: relative;*/
+    padding-left:50px;
+}
+
+#user > img {
+    border:10px;
+    padding:20px;
+    width: 184px;
+    height: 211px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: 50% / cover no-repeat;
+}
+
+#user > div {
+    margin:10px;
+    border:10px;
+    display:inline-block;
+    /*
+    position: absolute; top: 50%;
+    transform: translate(0,-50%);
+   */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+}
+
+#info > span {
+    color: #777575;
+    text-align: center;
+    font-family:  'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+hr {
+    margin:20px;
+    margin-left:50px;
+    margin-right:50px;
+    border:10px;
+    border: 1px solid #4a4a4a;
+}
+
+#list {
+    text-align: center;
+    margin:10px;
+    padding:20px;
+}
+
+#listbox > span {
+    margin:10px;
+    padding:5px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 11.079px;
+    background: #d9d9d9cc;
+    color:white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+}
+
+button {
+    margin:10px;
+    padding:5px;
+    border-radius: 10px;
+    border: none;
+    background: #46A15A;
+    color:white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+
+#listbox > button {
+    padding-left:10px;
+    padding-right:10px;
+    font-size: 18px;
+}
+
+#add {
+    float:center;
+    padding-left:20px;
+    padding-right:20px;
+    font-size: 18px;
+}
+
+form > div {
+    margin:10px;
+    border:10px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+form input {
+    width:400px;
+    height:25px;
+    background: #EFEFEF;
+    border-radius: 5px;
+    border: none;
+}
+
+.newadd {
+    padding-left:50px;
+    padding-top:10px;
+}
+
+.newadd  button {
+    padding-left:12px;
+    padding-right:12px;
+}
+
+#checkword {
+    font-size:12px;
+    color: #4E4E4E;
+}

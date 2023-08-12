@@ -26,4 +26,6 @@ urlpatterns = [
     path('home/', include('login.urls')),
     path('home/', include('signup.urls')),
     path('remailbox/', include('remailbox.urls')),
+    path('mypage/', include('mypage.urls')),
+    
 ]
