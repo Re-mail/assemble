@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+{% load static %}
+<!-- {% block contents %} -->
+<html>
+    <head>
+        <title>
+            signup
+        </title>
+        <link rel="stylesheet" href="{% static 'user/css/signup.css' %}">
+    </head>
+    <body>
+        <div class="" >
+
+            <div class="re-mail" >
+                Re-mail 
+            </div>
+
+        </div>
+    </body>
+</html>
+
+<form action="." method="POST">
+    {% csrf_token %}
+
+
+    <!-- <input type="text" class="emailcheckbox" >
+    </input>
+
+    <input type="password" class="wpwdbox">
+    </input>
+
+    <input type="password" class="rwpwdbox">
+    </input> -->
+
+    {% for form in forms %}
+    <div>
+        <label for="{{form.id_for_label}}">{{ form.label }}</label>
+        {{ form }}
+    </div>
+    {% endfor %}
+
+    <div class="writename">
+        닉네임
+    </div>
+    <div class="checkemail" >
+        이메일 인증 
+    </div>
+    <div class="pwd" >
+        비밀번호 
+    </div>
+    <div class="checkpwd" >
+        비밀번호 확인 
+    </div>
+
+    <div class="writecode" >
+        인증 코드 입력 
+    </div>
+    <input type="text" class="wcodebox">
+    </input>
+    
+    <input type="submit" class="signupsubmit" value="제출" >
+    </input>
+
+    <input type="submit" class="sendcodebox" value="인증 코드 보내기">
+    </input>
+    <input type="submit" class="checkcodebox" value="인증 코드 확인">
+    </input>
+    
+    
+    {% if error %}
+    {{ error }}
+    {% endif %}
+
+
+</form>
+<!-- {% endblock contents %} -->

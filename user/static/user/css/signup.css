@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    }
+body{
+   background: #ffffff;
+    width: 1280px;
+    height: 832px;
+    position: relative;
+    overflow: hidden;
+   }
+
+.emailcheckbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 256px;
+   }
+
+.wcodebox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 346px;
+}
+
+.wnamebox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 429px;
+    }
+
+.wpwdbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 516px;
+    }
+
+.rwpwdbox{
+    border: none;
+    background: #d3d3d3;
+    width: 563px;
+    height: 42px;
+    position: absolute;
+    left: 348px;
+    top: 610px;
+    }
+
+
+.signupsubmit {
+    border: none;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 25px;
+    font: 700 20px 'Droid Sans', sans-serif;
+    width: 224px;
+    height: 79px;
+    position: absolute;
+    text-align: center;
+    left: 956px;
+    top: 577px;
+    }
+ 
+    
+.sendcodebox{
+    border: none;
+    font: 700 20px 'Droid Sans', sans-serif;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 179px;
+    height: 42px;
+    position: absolute;
+    text-align: center;
+    left: 927px;
+    top: 256px;
+    }
+
+.checkcodebox{
+    border: none;
+    font: 700 20px 'Droid Sans', sans-serif;
+    background: #46a15a;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 179px;
+    height: 42px;
+    position: absolute;
+    text-align: center;
+    left: 927px;
+    top: 346px;
+   }
+
+   
+.writename{
+    color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+    top: 400px;
+    }
+
+
+.checkemail{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 221px;
+   }
+
+.writecode{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 317px;
+   }
+
+.pwd{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 485px;
+   }
+
+.checkpwd{
+   color: #000000;
+    text-align: center;
+    font: 400 20px 'Droid Sans', sans-serif;
+    position: absolute;
+    left: 348px;
+   top: 577px;
+   }
+
+
+.re-mail {
+    color: #19722d;
+    text-align: center;
+    font: 400 65px 'Moul', sans-serif;
+    position: absolute;
+    font-weight: 100px;
+    left: 450px;
+    top: 103px;
+    width: 358px;
+    height: 87px;
+   }
+

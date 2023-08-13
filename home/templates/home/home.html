@@ -4,23 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            signup
+            home
         </title>
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
     </head>
     <body>
-        <div class="" >
-            <input type="button" class="loginb" value="Log in" onClick="location.href='login'">
-            </input>
-            <input type="button" class="signupb" value="Sign up" onClick="location.href='signup'">
-            </input>
-            <input type="button" class="about" value="about" onClick="location.href='about'">
-            </input>
+        <div class="section" >
             <div class="re-mail" >
                 Re-mail 
             </div>
+            <div class='button'><input type="button" id="loginb" value="Log in" onClick="location.href='login'"></div>
+            <div class='button'><input type="button" id="signupb" value="Sign up" onClick="location.href='signup'"></div>
+            <div class='button'><input type="button" id="about" value="about" onClick="location.href='about'"></div>
         </div>
-        {% block contents %}
-        {% endblock contents %}
+        <!-- {% block contents %}
+        {% endblock contents %} -->
     </body>
 </html>
