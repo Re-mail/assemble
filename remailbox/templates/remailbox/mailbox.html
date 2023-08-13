@@ -18,7 +18,7 @@
                 <h1><a href="index.html">Re-mail</a></h1>
             </div>
             <div style="float: right;" id="header-profile" >
-                <img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 50px;"><span style="margin: 0px 15px 0px 10px;">woo</span>
+                <img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">woo</a>
             </div>
             <div id="nav">
                 <nav>
@@ -41,13 +41,24 @@
                 </ul>
             </div>
             
-            <div class="cd1" style="margin-top: 80px; float: left;">
-                <div style="margin-top: 20px;">
-                    <a href="http://127.0.0.1:8000/remailbox/mail_read/"> <h6 id="read-info">보낸사람     제목</h6></a><hr>
-                    <h6 id="read-info">보낸사람     제목</h6><hr>
-                    <h6 id="read-info">보낸사람     제목</h6><hr>
+            <form action="{% url 'mailbox' %}" method="POST">
+                {% csrf_token %}
+                <div class="cd1" style="margin-top: 80px; float: left;">
+                    <div style="margin-top: 20px;">
+                        {% for mail in maillist%}
+                            <h6><input  style="border:none;font-size:16px;" type="submit" value="{{mail.sender}}    {{mail.title}}    {{mail.time}}" name="selected" /><h6><hr>
+
+                            {% comment %} <a href="http://127.0.0.1:8000/remailbox/mail_read/">
+                                <h6 id="read-info">{{mail.sender}}&emsp;&emsp; {{mail.title}}&emsp;&emsp; {{mail.time}}</h6>
+                            </a><hr> {% endcomment %}
+                        {% endfor %}
+
+                        {% comment %} <a href="http://127.0.0.1:8000/remailbox/mail_read/"> <h6 id="read-info">보낸사람     제목</h6></a><hr>
+                        <h6 id="read-info">보낸사람     제목</h6><hr>
+                        <h6 id="read-info">보낸사람     제목</h6><hr> {% endcomment %}
+                    </div>
                 </div>
-            </div>
+            </form>
 
             <div style="clear:both;"></div>
             
