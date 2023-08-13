@@ -205,3 +205,12 @@ ul {
     padding: 0px 10px 0px 10px;
     text-align: center;
 }
+
+#maillistttt{
+    border: none;
+    background: white;
+    width: 500px;
+    margin-left: 10px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}

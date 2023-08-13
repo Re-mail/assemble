@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    </head>
+    <body>
+        <!-- <h1>Hello!</h1>
+        <a href="/"><button>home</button></a>
+
+        {% if login_session %}
+        <a href="{% url 'user:logout' %}"><button>log out</button></a>
+        {% else %}
+        <a href="{% url 'user:login' %}"><button>log in</button></a>
+        <a href="{% url 'user:register' %}"><button>sign up</button></a>
+        {% endif %} -->
+        <div class="section" >
+            <div class="re-mail">Re-mail</div>
+            <div class='button'><a href="{% url 'user:login' %}"><input type="button" id="loginb" value="log in"></a></div>
+            <div class='button'><a href="{% url 'user:register' %}"><input type="button" id="signupb" value="Sign up"></a></div>
+            <div class='button'><input type="button" id="about" value="about" onClick="location.href='/'"></div>
+        </div>
+        {% block contents %}
+        {% endblock contents %}
+    </body>
+</html>

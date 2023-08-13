@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+		<title>Re-mail/mypage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'mypage/css/mypage.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	</head>
+    <body>
+		<!-- Header -->
+		<header id="header" class="container">
+			<!-- Logo -->
+				<div id="logo" style="float: left;">
+					<h1><a href="http://127.0.0.1:8000/remailbox">Re-mail</a></h1> <!--로고 누르면 홈 화면으로 가도록 수정-->
+				</div>
+				<div style="float: right;" id="header-profile" >
+					<img src="{% static 'mypage/images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">woo</a>
+				</div>
+				</div>
+		</header>
+
+		<!-- Nav -->
+		<nav style="float: left;">
+			<ul id="table">
+				<li><a href="mypage.html">계정 관리</a></li>
+				<li><a href="address.html">주소록</a></li>
+			</ul>
+		</nav>
+		{% block mypage_section %}
+		<!-- Section -->
+		<section>
+			<div id="user">
+				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMTJfMjky%2FMDAxNjcwODQ4MzYyNTYy.QeYlBp0TP6KOWha_zEZnLqY-wQ6jEwZ0jEEVbdbZUP8g.jdK9_uUcbOqKVsSJl6GpN2POuSe-ZFVKiGtpSXIelEEg.JPEG.windysky70%2FIMG_8178.JPG&type=sc960_832" 
+					alt="user image">
+				<div id="info">
+					<h2>User Name</h2>
+					<br>
+					<span>가입 메일 주소@domain.com</span>
+				</div>
+				
+			</div>
+			<hr>
+			<div id="list">
+				<div id="listbox">
+					<span>업무용</span> 
+					<span>메일주소1@re-mail.link</span> 
+					<button type="button">삭제</button>
+				</div>
+				<div id="listbox">
+					<span>OTT</span> 
+					<span>메일주소2@re-mail.link</span> 
+					<button type="button">삭제</button>
+				</div>
+				<div id="listbox">
+					<span>OTT</span> 
+					<span>메일주소3@re-mail.link</span> 
+					<button type="button">삭제</button>
+				</div>
+				<br><br>
+				<button id="add" type="button" onClick="location.href='new_address'">메일 주소 생성</button>
+			</div>
+			
+		</section>
+		{% endblock mypage_section %}
+    </body>
+	
+</html>
