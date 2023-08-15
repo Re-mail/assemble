@@ -24,7 +24,6 @@ def mailbox(request):
     else:
         return redirect('home')
     
-
 def mail_write(request):
     user_content = User.objects.all()
     content = {'user_content' : user_content}
