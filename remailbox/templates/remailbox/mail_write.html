@@ -12,21 +12,22 @@
                 <h1><a href="index.html">Re-mail</a></h1>
             </div>
             <div style="float: right;" id="header-profile" >
-                <img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">woo</a>
+                <img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">{{ request.user.username }}</a>
             </div>
             <div id="nav">
                 <nav>
                     <ul>
-                        <li><a href="#">woo@re-mail.link</a></li>
+                        <li><a href="#">{{ request.user.username }}@re-mail.link</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <div id = "main">
+            
             <div style="float: left;">
                 <ul>
-                    <li id="menu-profile"><img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 70px;"><span style=" margin-left:5px">woo</span></li>
+                    <li id="menu-profile"><img src="{% static 'images/free-icon-profile-6522516.png' %}" style="width: 70px;"><span style=" margin-left:5px">{{ request.user.username }}</span></li>
                     <li><a class="write-mail" href="http://127.0.0.1:8000/remailbox/mail_write/">메일쓰기</a></li>
                     <hr>
                     <li><a href="http://127.0.0.1:8000/remailbox/">받은 메일</a></li>
@@ -36,6 +37,15 @@
             </div>
             
             <div class="cd1" style="margin-top: 90px; float: left;">
+                {% comment %} {% for user in user_content %}
+                    <br>
+                    
+                    <p>유저이름 : {{ user.username }}</p>
+                    <p>이메일 : {{ user.email }}</p>
+
+                    <br>
+                {% endfor %} {% endcomment %}
+
                 <h6>보낸사람 <input type = "text" name = "sender" style='border: solid gray; width:400px' /></h6>
         		<h6>받을사람 <input type = "text" name = "receiver" style='border: solid gray; width:400px; ' value="{{sender}}" /></h6>
                 <h6>참조 <input type = "text" name = "chamjo" style='border: solid gray; width:400px; ' /></h6>

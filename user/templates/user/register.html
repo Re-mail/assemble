@@ -1,21 +1,54 @@
-{% extends 'home/index.html' %}
+{% comment %} {% extends 'home/index.html' %}
 
-{% block contents %}
-<div>sign up page</div>
-
-<form action="" method="POST">
-    {% csrf_token %}
-
-    {% for form in forms %}
-    <div>
-        <label for = "{{ form.id_for_label }}">{{ form.label }}</label>
-        {{ form }}
-    </div>
-    {% endfor %}
-
-    {% if error %}
-    {{error}}
-    {% endif %}
-    <button type="submit" name="register-submit" value="register">제출</button>
-</form>
-{% endblock contents %}
+{% block contents %} {% endcomment %}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    {% block contents %}
+        <div class="container my-3">
+            <form method="post" action="{% url 'user:register' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username">사용자 이름</label>
+                    <input type="text" class="form-control" name="username" id="username">
+                    {% if data == "id_overlap" %}
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> 이미 존재하는 아이디입니다.
+                        </div>
+                    {% endif %}
+                    {% if data == "id_too" %}
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> ID의 길이는 4~20자여야 합니다.
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="password1">비밀번호</label>
+                    <input type="password" class="form-control" name="password1" id="password1">
+                    {% if data == "password_too" %}
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> 비밀번호의 길이는 5~15자여야 합니다.
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="password2">비밀번호 확인</label>
+                    <input type="password" class="form-control" name="password2" id="password2">
+                    {% if data == "check_not_same" %}
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> 비밀번호와 비밀번호 확인이 다릅니다.
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="email">이메일</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                </div>
+                <button type="submit" class="btn btn-primary">생성하기</button>
+            </form>
+        </div>
+    {% endblock %}
+    </body>
+{% comment %} {% endblock contents %} {% endcomment %}

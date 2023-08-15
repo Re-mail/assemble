@@ -17,7 +17,7 @@
 					<h1><a href="http://127.0.0.1:8000/remailbox">Re-mail</a></h1> <!--로고 누르면 홈 화면으로 가도록 수정-->
 				</div>
 				<div style="float: right;" id="header-profile" >
-					<img src="{% static 'mypage/images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">woo</a>
+					<img src="{% static 'mypage/images/free-icon-profile-6522516.png' %}" style="width: 50px;"><a href="http://127.0.0.1:8000/mypage" style="margin: 0px 15px 0px 10px; text-decoration: none;">{{ request.user.username }}</a>
 				</div>
 				</div>
 		</header>
@@ -36,7 +36,7 @@
 				<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMTJfMjky%2FMDAxNjcwODQ4MzYyNTYy.QeYlBp0TP6KOWha_zEZnLqY-wQ6jEwZ0jEEVbdbZUP8g.jdK9_uUcbOqKVsSJl6GpN2POuSe-ZFVKiGtpSXIelEEg.JPEG.windysky70%2FIMG_8178.JPG&type=sc960_832" 
 					alt="user image">
 				<div id="info">
-					<h2>User Name</h2>
+					<h2>{{ request.user.username }}</h2>
 					<br>
 					<span>가입 메일 주소@domain.com</span>
 				</div>
