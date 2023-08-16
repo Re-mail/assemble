@@ -23,6 +23,13 @@
             <div class='button'><input type="button" id="about" value="about" onClick="location.href='/'"></div>
         </div>
         {% block contents %}
-        {% endblock contents %}
+            {% if messages %}
+                {% for message in messages %}
+                    <script type="text/javascript">
+                        alert("{{ message.message }}")
+                    </script>
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
     </body>
 </html>

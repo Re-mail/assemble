@@ -1,15 +1,22 @@
 from django.db import models
+from user.models import User
 
-# Create your models here.
-
-class Address(models.Model):
-    address_remail = models.EmailField(max_length=128, unique=True, verbose_name='생성 주소')
-    address_category = models.CharField(max_length=32, unique=True, verbose_name='생성 주소 카테고리')
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.address_remail
+        return self.user.username
+
+class UserRemail(models.Model):
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    remail = models.EmailField(max_length=255, unique=True)
     
-    class Meta:
-        db_table = 'address'
-        verbose_name = 'remail 주소'
-        verbose_name_plural = 'remail 주소'
+    def __str__(self):
+        return self.remail
+
+class Category(models.Model):
+    user_remail = models.OneToOneField(UserRemail, on_delete=models.CASCADE)
+    category = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.category

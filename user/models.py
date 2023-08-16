@@ -46,11 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True, null = True)
     is_admin = models.BooleanField(default=False, null = True)
 
-    #User모델에서 id를 기준으로 index형성 -> 나중에 id로 User를 필터링할때 O(lonN)의 복잡도로 줄일수 있습니다
-    # indexes = [  
-    #     models.Index(fields=['id'])
-    # ]
-
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 

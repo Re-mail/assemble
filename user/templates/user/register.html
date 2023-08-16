@@ -11,16 +11,16 @@
             <form method="post" action="{% url 'user:register' %}">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label for="username">사용자 이름</label>
+                    <label for="username">닉네임</label>
                     <input type="text" class="form-control" name="username" id="username">
                     {% if data == "id_overlap" %}
                         <div class="alert alert-danger">
-                            <strong>Fail!</strong> 이미 존재하는 아이디입니다.
+                            <strong>Fail!</strong> 이미 존재하는 닉네임입니다.
                         </div>
                     {% endif %}
                     {% if data == "id_too" %}
                         <div class="alert alert-danger">
-                            <strong>Fail!</strong> ID의 길이는 4~20자여야 합니다.
+                            <strong>Fail!</strong> 닉네임의 길이는 2~20자여야 합니다.
                         </div>
                     {% endif %}
                 </div>
@@ -31,6 +31,10 @@
                         <div class="alert alert-danger">
                             <strong>Fail!</strong> 비밀번호의 길이는 5~15자여야 합니다.
                         </div>
+                    {% elif data == "check_wrong_combination" %} 
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> 비밀번호 조합규칙에 맞지 않습니다. 3종 이상 문자로 구성된 8자리 이상 비밀번호를 입력해주세요
+                        </div>
                     {% endif %}
                 </div>
                 <div class="mb-3">
@@ -40,15 +44,21 @@
                         <div class="alert alert-danger">
                             <strong>Fail!</strong> 비밀번호와 비밀번호 확인이 다릅니다.
                         </div>
+                    
                     {% endif %}
                 </div>
                 <div class="mb-3">
                     <label for="email">이메일</label>
                     <input type="email" class="form-control" name="email" id="email">
+                    {% if data == "email_overlap" %}
+                        <div class="alert alert-danger">
+                            <strong>Fail!</strong> 이미 가입된 이메일입니다.
+                        </div>
+                    {% endif %}
                 </div>
                 <button type="submit" class="btn btn-primary">생성하기</button>
             </form>
         </div>
-    {% endblock %}
+    {% endblock contents %}
     </body>
 {% comment %} {% endblock contents %} {% endcomment %}
